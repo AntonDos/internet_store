@@ -151,6 +151,10 @@ class CartProduct(models.Model):
 
 class Cart(models.Model):
 
+    objects = None
+    objects = None
+    objects = None
+    objects = None
     owner = models.ForeignKey('Customer', null=True, verbose_name='Владелец', on_delete=models.CASCADE)
     products = models.ManyToManyField(CartProduct, blank=True, related_name='related_cart')
     total_products = models.PositiveIntegerField(default=0)
@@ -164,6 +168,8 @@ class Cart(models.Model):
 
 class Customer(models.Model):
 
+    objects = None
+    objects = None
     user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
     phone = models.CharField(max_length=20, verbose_name='Номер телефона', null=True, blank=True)
     address = models.CharField(max_length=255, verbose_name='Адрес', null=True, blank=True)
