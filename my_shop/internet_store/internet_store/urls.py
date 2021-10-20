@@ -1,4 +1,4 @@
-"""internet_store URL Configuration
+"""shop URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -20,7 +20,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mainapp.urls'))
+    path('', include('mainapp.urls')),
+    path('product-specs/', include('specs.urls'))
 ]
 
 if settings.DEBUG:
