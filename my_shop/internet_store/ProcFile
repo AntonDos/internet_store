@@ -1,1 +1,0 @@
-web: gunicorn internet_store.wsgi
